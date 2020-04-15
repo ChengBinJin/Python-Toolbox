@@ -6,7 +6,7 @@ SAVE_DIR = './save/video'
 
 
 def all_files_under(path, extension=None, append_path=True, sort=True):
-    if not isinstance(extension, list):
+    if (extension is not None) and (not isinstance(extension, list)):
         extension = list(extension)
 
     if append_path:
